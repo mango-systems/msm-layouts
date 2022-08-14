@@ -199,10 +199,9 @@ Change Desktop Layout</property>
           </packing>
         </child>
         <child>
-          <object class="GtkBox">
+          <object class="GtkExpander">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
-            <property name="homogeneous">True</property>
+            <property name="can-focus">True</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
@@ -213,16 +212,30 @@ Change Desktop Layout</property>
 - Dash to dock</property>
                 <property name="use-markup">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
             </child>
+            <child type="label">
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Required extensions (dependencies)</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkExpander">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
             <child>
               <object class="GtkButtonBox">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+                <property name="border-width">7</property>
                 <property name="orientation">vertical</property>
                 <property name="homogeneous">True</property>
                 <property name="layout-style">start</property>
@@ -230,7 +243,8 @@ Change Desktop Layout</property>
                   <object class="GtkLabel">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="label" translatable="yes">Suggest more layouts</property>
+                    <property name="label" translatable="yes">Install all the required extensions from Mango-Layout-extension-index (github)</property>
+                    <property name="use-markup">True</property>
                   </object>
                   <packing>
                     <property name="expand">True</property>
@@ -240,7 +254,7 @@ Change Desktop Layout</property>
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">Install extensions</property>
+                    <property name="label" translatable="yes">Install extensions (Internet Required)</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
@@ -252,17 +266,58 @@ Change Desktop Layout</property>
                   </packing>
                 </child>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
+            </child>
+            <child type="label">
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Install all required extensions (not required if already all extensions are installed)</property>
+              </object>
             </child>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">3</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkExpander">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">label</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+            </child>
+            <child type="label">
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Troubleshoot/Suggest Features/Contribute/Support</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">5</property>
           </packing>
         </child>
       </object>
