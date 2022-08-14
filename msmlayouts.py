@@ -65,6 +65,11 @@ class Handler:
 
     def materialshell(self, *args):
         return
+    
+    def exec_installex(self, *args):
+        os.system('pkexec curl --proto \'=https\' --tlsv1.2 -sSf https://raw.githubusercontent.com/msm-linux/msm-layouts/master/extension-index/installer.py | python3')
+        return
+
 
 
 
