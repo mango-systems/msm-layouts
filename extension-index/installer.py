@@ -9,3 +9,6 @@ extension_index = {
 }
 
 print(extension_index)
+
+for extension in extension_index:
+    print(extension)
