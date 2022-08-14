@@ -13,6 +13,13 @@ from gi.repository import Notify
 # win.show_all()
 # Gtk.main()
 
+required_extension = [
+    "https://extensions.gnome.org/extension/307/dash-to-dock/",
+    "https://extensions.gnome.org/extension/3628/arcmenu/",
+    "https://extensions.gnome.org/extension/1160/dash-to-panel/",
+    "https://extensions.gnome.org/extension/615/appindicator-support/"
+                      ]
+
 def notify(layout):
     Notify.init ("msm-layout")
     Hello=Notify.Notification.new ("Layout Applied",f"Layout: {layout}","")
@@ -68,10 +75,8 @@ class Handler:
     
     def exec_installex(self, *args):
         # os.system('pkexec curl --proto \'=https\' --tlsv1.2 -sSf https://raw.githubusercontent.com/msm-linux/msm-layouts/master/extension-index/installer.py | python3')
-        os.system('xdg-open https://extensions.gnome.org/extension/307/dash-to-dock/')
-        os.system('xdg-open https://extensions.gnome.org/extension/3628/arcmenu/')
-        os.system('xdg-open https://extensions.gnome.org/extension/1160/dash-to-panel/')
-        os.system('xdg-open https://extensions.gnome.org/extension/615/appindicator-support/')
+        for extension in required_extension:
+            os.system(f'xdg-open {extension}')
         return
 
 

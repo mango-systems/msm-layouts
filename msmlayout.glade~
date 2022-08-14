@@ -27,45 +27,26 @@ Change Desktop Layout</property>
           </packing>
         </child>
         <child>
-          <object class="GtkBox">
-            <property name="name">gnomever</property>
+          <object class="GtkExpander">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
-            <property name="border-width">16</property>
-            <property name="homogeneous">True</property>
+            <property name="can-focus">True</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="label" translatable="yes">Gnome Version:</property>
+                <property name="margin-top">5</property>
+                <property name="margin-bottom">5</property>
+                <property name="label" translatable="yes">Run this command in terminal (to aquire permission):       &lt;tt &gt;sudo flatpak --permission blah&lt;/tt&gt;</property>
+                <property name="use-markup">True</property>
                 <property name="selectable">True</property>
-                <attributes>
-                  <attribute name="font-desc" value="Rubik Bold 24"/>
-                  <attribute name="weight" value="heavy"/>
-                </attributes>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
             </child>
-            <child>
+            <child type="label">
               <object class="GtkLabel">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="label" translatable="yes">18</property>
-                <property name="selectable">True</property>
-                <attributes>
-                  <attribute name="font-desc" value="Rubik 24"/>
-                  <attribute name="weight" value="heavy"/>
-                </attributes>
+                <property name="label" translatable="yes">Post-Install Setup</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
             </child>
           </object>
           <packing>
