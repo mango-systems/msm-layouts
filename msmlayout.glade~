@@ -244,7 +244,7 @@ Change Desktop Layout</property>
                     <property name="homogeneous">True</property>
                     <child>
                       <object class="GtkButton">
-                        <property name="label" translatable="yes">Install extensions (Internet Required)</property>
+                        <property name="label" translatable="yes">Install extensions (from extensions.gnome.org)</property>
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
