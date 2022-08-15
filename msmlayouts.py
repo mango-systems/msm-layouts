@@ -2,6 +2,8 @@
 
 import gi
 import os
+# import argparse
+# later add a argument parser
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
@@ -12,6 +14,7 @@ from gi.repository import Notify
 # win.connect("destroy", Gtk.main_quit)
 # win.show_all()
 # Gtk.main()
+
 
 required_extension = [
     "https://extensions.gnome.org/extension/307/dash-to-dock/",
@@ -34,6 +37,7 @@ def default():
 class Handler:
     def onDestroy():
         Gtk.main_quit()
+        exit
     
 
         
@@ -78,8 +82,6 @@ class Handler:
         for extension in required_extension:
             os.system(f'xdg-open {extension}')
         return
-
-
 
 
 
